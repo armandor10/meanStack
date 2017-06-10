@@ -18,3 +18,12 @@
 Stop port (cmd windows)
 > netstat -o -n -a | findstr 0.0:3000
 > taskkill /F /PID 3116
+
+//mongo
+> mongod //inicia mongo
+
+> mongo // 
+> show dbs
+> use [db]
+> show collections 
+> db.[model].find()
