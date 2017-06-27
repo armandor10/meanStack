@@ -14,6 +14,7 @@ mongoose.connect("mongodb://localhost:27017/chrip-test");
 //// Initialize Models 
 require('./models/models.js');
 
+var index = require('./routes/index');
 var api = require('./routes/api');
 
 var app = express();
@@ -40,6 +41,7 @@ app.use(passport.session());
 var initPassport = require('./passport-init');
 initPassport(passport);
 
+app.use('/', index);
 app.use('/api', api);
 app.use('/auth', authenticate);
 
